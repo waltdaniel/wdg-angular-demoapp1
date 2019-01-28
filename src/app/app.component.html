@@ -2,15 +2,19 @@
 solo agregando una ruta.
 -->
 <mat-toolbar color="primary">
-    <span>LEEEEEEE</span>
-
+    <button mat-stroked-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>APP Nasa foto del día</span>
 </mat-toolbar>
 
-<button mat-stroked-button>
-    <mat-icon>menu</mat-icon>
-</button>
 <nav>
-    <button mat-button>HOME</button>
+    <a>
+        <button mat-button [routerLink]="''">HOME</button>
+    </a>
+    <a>
+        <button mat-button [routerLink]="'material-demo'">Mat demo</button>
+    </a>
 </nav>
 <router-outlet>
 </router-outlet>
