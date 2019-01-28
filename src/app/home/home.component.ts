@@ -12,8 +12,11 @@ export class HomeComponent implements OnInit {
   constructor(private nasaApi: NasaApiService) { }
 
   ngOnInit() {
-    //datos prueba a fin de probar visualiz datos
-    this.apod = this.nasaApi.getDATOSapod();
+    //consumiendo del httpCliente de nasa-api
+    this.nasaApi.getDATOSapod()
+      .subscribe((data: Apod) => {
+        this.apod = data; //acá el dato retornado ya no es un any sino de T Apod
+      });
   }
 
 }
