@@ -1,0 +1,26 @@
+<div>
+
+  <mat-card class="daa-card">
+    <h3>h3 HOME seccion comp</h3>
+
+    <mat-card-header>
+      <img mat-card-avatar src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-cvKQUoOSdOo%2FT1x_z36vv7I%2FAAAAAAAAAN4%2FGrpFzzcuPAc%2Fs1600%2Fnasa%2Bredesign-01.png&f=1"
+        alt="">
+      <mat-card-title>
+        <!-- referenciando un va a la interfaz datos apod-->
+        {{ apod.title}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ apod.date}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="apod.url" alt="">
+    <mat-card-content>
+      <p>{{ apod.explanation }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>ME gusta</button>
+      <button mat-button>maso...</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
